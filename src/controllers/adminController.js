@@ -57,7 +57,7 @@ export default class AdminController {
     const response = await this.adminModel.getUserTasks({ input: id })
 
     if (response.length <= 0) {
-      return res.status(404).json({
+      return res.status(200).json({
         result: true,
         response: ['No hay tareas'],
         data: []
