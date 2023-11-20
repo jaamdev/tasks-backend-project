@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import express from 'express'
-import cors from 'cors'
+import corsMiddleware from './src/middleware/cors.js'
 import connectDB from './src/config/db.js'
 import userRouter from './src/routes/user.routes.js'
 import taskRouter from './src/routes/task.routes.js'
@@ -12,10 +12,11 @@ const server = express()
 
 server.disable('x-powered-by')
 server.use(express.json())
-server.use(cors())
+server.use(corsMiddleware())
 server.use('/cuenta', userRouter)
 server.use('/tarea', taskRouter)
 server.use('/admin', adminRouter)
+server.all('*', (req, res) => res.redirect('https://tasks-frontend-project.vercel.app'))
 
 async function initServer () {
   const isDBReady = await connectDB(process.env.DB_URL)
