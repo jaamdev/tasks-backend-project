@@ -57,7 +57,6 @@ Ayudó mucho a mejorar mi comprensión sobre el funcionamiento del framework [Ex
 
 | Nombre | Info |
 | -: | :- |
-| React Router | [https://reactrouter.com](https://reactrouter.com) |
 | NodeJS | [https://nodejs.org](https://nodejs.org) |
 | ExpressJS | [https://expressjs.com](https://expressjs.com) |
 | Cors | [https://github.com/expressjs/cors](https://github.com/expressjs/cors) |
